@@ -1,0 +1,29 @@
+FINDING DUPLICATE ELEMENTS IN AN ARRAY
+
+CODE#1
+
+#include <iostream>
+#include <string.h>
+using namespace std;
+int main()
+{
+    int arr[100];
+    int n,i;
+    cout<<"Enter the number of elements:"<<endl;
+    cin>>n;
+    cout<<"Enter the elements in an array:"<<endl;
+    for(i=0;i<n;i++)
+    {
+        cin>>arr[i];
+    }
+    for(i=0;i<n;i++)
+    {
+        for(int j=0;j<i;j++)
+        {
+            if (arr[i]==arr[j])
+            {
+              cout<<arr[i];
+            }
+        }
+    }
+}
