@@ -1,0 +1,35 @@
+
+CLASSES AND OBJECTS
+
+
+#include <iostream>  
+#include <string.h>
+using namespace std;  
+class Employee {  
+   private:  
+       int eid;      
+       char name[20];
+       float salary;  
+   public:
+       void getdata(int i, char n[ ], float s)    
+        {    
+            eid = i;    
+            strcpy(name,n);    
+            salary = s;  
+        }    
+       void display()    
+        {    
+            cout<<eid<<"  "<<name<<"  "<<salary<<endl;    
+        }    
+};  
+int main(void) {  
+    Employee e;
+    int emid;
+    char n[30];
+    int sal;
+    cout<<"Enter the employee id name and salary:"<<endl;
+    cin>>emid>>n>>sal;
+    e.getdata(emid,n,sal);    
+    e.display();    
+    return 0;  
+}
