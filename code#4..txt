@@ -1,0 +1,42 @@
+#include <iostream>
+
+using namespace std;
+class circle
+{
+    float radius;
+    double area;
+    double circum;
+    const float pi=3.14;
+    public:
+    circle() 
+    {
+        radius=0;
+        area=0;
+        circum=0;
+    }
+    circle(float r) 
+    {
+        radius=r;
+    }
+    void areacal()
+    {
+        area=pi*radius*radius;
+    }
+    void circumcal()
+    {
+        circum=2*pi*radius;
+    }
+    void display()
+    {
+        cout<<"Area of circle: "<<area<<endl;
+        cout<<"Circumference of circle: "<<circum<<endl;
+    }
+};
+main()
+{
+    circle c1;
+    circle c2(5.6);
+    c2.areacal();
+    c2.circumcal();
+    c2.display();
+}
